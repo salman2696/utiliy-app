@@ -5,12 +5,10 @@ function Form(props) {
     const toUpperCase = () => {
         let newText = text.toUpperCase();
         setText(newText);
-        setTextColor("red");
     };
     const toLowerCase = () => {
         let newText = text.toLowerCase();
         setText(newText);
-        setTextColor("black");
     };
     const handleOnChange = (event) => {
         setText(event.target.value);
@@ -29,7 +27,7 @@ function Form(props) {
         <>
             <div className={`container my-4" text-${props.mode==='dark'?'light':'dark'}`}>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlTextarea1" className="form-label">
+                    <label htmlFor="exampleFormControlTextarea1" className="form-label my-4">
                         Enter text below
                     </label>
                     <textarea
@@ -38,7 +36,7 @@ function Form(props) {
                         rows="10"
                         value={text}
                         onChange={handleOnChange}
-                        style={{color: textColor }}
+                        style={{backgroundColor: props.mode==='dark'?'#2d2733':'white' ,color: props.mode==='dark'?'white':'black' }}
                     ></textarea>
                 </div>
                 <div className="container">
