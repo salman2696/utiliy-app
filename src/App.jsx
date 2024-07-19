@@ -1,9 +1,13 @@
 import Navbar from "./components/Navbar"
 import Form from "./components/Form"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 function App() {
 
-const [mode , setMode] = useState ('light');
+const [mode , setMode] = useState (localStorage.getItem("mode"));
+
+useEffect(() => {
+  localStorage.setItem("mode", mode);
+},[mode])
 
 const modeButton = () => {
   
