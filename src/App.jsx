@@ -6,11 +6,15 @@ function App() {
 const [mode , setMode] = useState (localStorage.getItem("mode"));
 
 useEffect(() => {
+  if (mode === 'light') {
+    document.body.style.backgroundColor = "white";
+  } else {
+    document.body.style.backgroundColor = "#2d2733";
+  }
   localStorage.setItem("mode", mode);
-},[mode])
+}, [mode]);
 
 const modeButton = () => {
-  
   if (mode === 'light') {
     setMode('dark')
     document.body.style.backgroundColor = "#2d2733";
