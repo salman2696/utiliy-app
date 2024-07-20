@@ -105,7 +105,7 @@ function Form(props) {
             >
                 <h3>Character & words length</h3>
                 <p className="m-0">Text length: {text.length}</p>
-                <p>Words length: {text.split(" ").length - 1}</p>
+                <p>Words length: {text.length === 0 ? 0 : text.split(" ").length}</p>
             </div>
         </>
     );

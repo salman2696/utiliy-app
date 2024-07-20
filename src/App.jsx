@@ -5,7 +5,7 @@ function App() {
 
 const [mode , setMode] = useState (localStorage.getItem("mode"));
 
-localStorage.setItem("mode", mode);
+
 
 useEffect(() => {
   document.body.style.backgroundColor = mode === 'light' ? "white" : "#2d2733";
