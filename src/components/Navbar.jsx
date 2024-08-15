@@ -60,11 +60,6 @@ function Navbar(props) {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
-                  Disabled
-                </a>
-              </li>
             </ul>
           </div>
           <div className={`form-check form-switch text-${props.mode==='dark'?'light':'dark'}`}>
